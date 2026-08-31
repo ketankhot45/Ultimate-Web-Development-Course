@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+
+<body>
+
+    <h1>Fitness form</h1>
+    <form action="/process.php">
+
+        <label for="name">Name</label>
+        <input type="text" id="name"><br><br>
+
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" placeholder="Type No here"><br><br>
+
+        <label for="pass">Password</label>
+        <input type="password" id="pass" name="password"> <br><br>
+        <!-- Use name atribute which helps reciever to recognize or identify  -->
+
+        <label for="DOB">Date of Birth</label>
+        <input type="date" id="DOB"> <br><br>
+
+        <label for="m">E-mail</label>
+        <input type="email" id="m"> <br><br>
+
+
+        <p>Gender</p> <!-- for radio -->
+
+        <label for="gender">Male</label>
+        <input type="radio" id="male" name="gender" value="male">
+
+        <label for="gender">Female</label>
+        <input type="radio" id="female" name="gender" value="female"> <br><br>
+
+
+        <p>Hobby</p> <!-- for cheeckbox -->
+
+        <input type="checkbox" id="playing" name="playing" value="playing">
+        <label for="playing">Playing</label>
+
+        <input type="checkbox" id="dancing" name="dancing" value="dancing">
+        <label for="dancing">Dancing</label>
+
+        <input type="checkbox" id="swimming" name="swimming" value="swimming">
+        <label for="swimming">Swimming</label> <br><br>
+
+        <label for="city">Choose a city:</label>   <!-- for select  -->
+        <select id="city" name="city">
+            <option value="delhi">Delhi</option>
+            <option value="mumbai">Mumbai</option>
+            <option value="bangalore">Bangalore</option>
+        </select> <br><br>
+
+        <label for="message">Your Message:</label><br>  <!-- for textarea  -->
+        <textarea id="message" name="message" rows="4" cols="30"></textarea>   <br><br>
+
+
+        <input type="submit" value="SUBMIT">
+
+    </form>
+
+</body>
+
+</html>
