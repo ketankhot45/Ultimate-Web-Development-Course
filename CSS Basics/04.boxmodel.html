@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Box</title>
+    <style>
+        #div1 {
+            width: 50px;             /* content */
+            height: 50px;             /* content */
+            padding: 20px;
+            background-color: aquamarine;   /* content and pading are covered */
+            border: 2px solid black;
+            margin: 50px;
+        }
+            
+        #div2 {
+            width: 300px;
+            height: 150px;
+            padding: 0px 30px;
+            background-color: blueviolet;
+            border: 5px solid red;
+            margin: 10px 40px;
+            box-sizing: border-box;
+            }
+
+        .div3 {
+             width: 400px;
+             padding: 30px;
+             border: 10px solid black;
+             box-sizing: border-box;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div id="div1">
+        Content in 
+        Box
+    </div>
+
+    <div id="div2">
+        Content in 
+        Box
+    </div>
+
+    <div class="div3">
+        Content in 
+        Box
+    </div>
+</body>
+
+</html>
