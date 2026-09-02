@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Units & Sizing</title>
+
+<style>
+
+/* Root size for rem */
+html{
+  font-size:16px;
+}
+
+/* ---------- ABSOLUTE UNITS ---------- */
+
+.pxText{
+  font-size:20px;
+  color:blue;
+}
+
+.ptText{
+  font-size:16pt;
+  color:green;
+}
+
+.cmBox{
+  width:5cm;
+  height:2cm;
+  background:lightcoral;
+}
+
+.mmBox{
+  width:40mm;
+  height:20mm;
+  background:lightblue;
+}
+
+.inBox{
+  width:2in;
+  height:1in;
+  background:lightgreen;
+}
+
+/* ---------- RELATIVE UNITS ---------- */
+
+.percentParent{
+  width:300px;
+  background:#ddd;
+}
+
+.percentChild{
+  width:50%;       /* it will choose 150px which is 50% of parent */
+  background:orange;
+}
+
+.emText{
+  font-size:2em;
+}
+
+.remText{
+  font-size:2rem;
+}
+
+.vwBox{
+  width:20vw;
+  height:40px;
+  background:cyan;
+}
+
+.vhBox{
+  height:10vh;
+  background:yellowgreen;
+}
+
+.vminBox{
+  width:10vmin;
+  height:10vmin;
+  background:pink;
+}
+
+.vmaxBox{
+  width:10vmax;
+  height:10vmax;
+  background:violet;
+}
+
+/* ---------- CALC FUNCTION ---------- */
+
+.calcBox{
+  width:calc(100% - 100px);
+  height:50px;
+  background:black;
+  color:white;
+}
+
+</style>
+</head>
+
+<body>
+
+<h2 class="pxText">Text using PX (absolute)</h2>
+<h2 class="ptText">Text using PT (absolute)</h2>
+
+<div class="cmBox">5cm box</div><br>
+<div class="mmBox">40mm box</div><br>
+<div class="inBox">2in box</div><br><br>
+<hr>
+
+<h2 class="emText">Text using EM</h2>
+<h2 class="remText">Text using REM</h2>
+
+<div class="percentParent">Parent (300px)
+ <div class="percentChild">50%</div>
+</div>
+
+<br>
+
+<div class="vwBox">20vw</div><br>
+<div class="vhBox">10vh</div><br>
+<div class="vminBox">vmin</div><br>
+<div class="vmaxBox">vmax</div><br><br>
+
+<div class="calcBox">calc(100% - 100px)</div>
+
+</body>
+</html>
