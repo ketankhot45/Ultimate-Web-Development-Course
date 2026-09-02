@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+    <style>
+        h1 {                          /* element */
+            color: gray;
+        }
+
+        .green {                     /* class */
+            color: green;
+        }
+        .size {
+            font-size: 35px;
+        }
+
+
+        #main-heading {               /* ID */
+            font-family: Arial, sans-serif;
+        }
+
+
+        * {                          /* Universal */
+            margin: 1;
+            padding: 0;
+            background-color: antiquewhite
+        }
+
+
+        h3, h4 {                    /* Grouping */
+            color:red ;
+        }
+
+
+        div p {                     /* Descendant Selector */
+            font-style: italic;
+    
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>CSS Element</h1>
+    <p class="green size">This is use of class selector.</p>
+    <h2 id="main-heading">ID selector</h2>
+    <h3>For Grouping</h3>
+    <h4>For Grouping</h4>
+    <div> <p>This is a paragraph inside a div.</p> </div>
+    
+</body>
+
+</html>
