@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS Positioning Example</title>
+
+<style>
+
+/* Common box style */
+.box{
+  width:150px;
+  height:60px;
+  margin:10px;
+  padding:10px;
+  color:white;
+}
+
+/* 1. Static (default) */
+.staticBox{
+  position: static;
+  background: gray;
+}
+
+/* 2. Relative */
+.relativeBox{
+  position: relative;
+  left: 40px;
+  background: blue;
+}
+
+/* 3. Absolute */
+.parent{
+  position: relative;
+  background: lightgray;
+  height:150px;
+}
+
+.absoluteBox{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: red;
+}
+
+/* 4. Fixed */
+.fixedBox{
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: green;
+}
+
+/* 5. Sticky */
+.stickyBox{
+  position: sticky;
+  top: 0;
+  background: purple;
+  /* z-index: 100; */
+
+}
+
+</style>
+</head>
+
+<body>
+
+<h2 class="stickyBox">Sticky Header</h2>
+
+<div class="box staticBox">Static</div>
+
+<div class="box relativeBox">Relative</div>
+
+<div class="parent">
+  Parent
+  <div class="box absoluteBox">Absolute</div>
+</div>
+
+<div class="box fixedBox">Fixed</div>
+
+<p>Scroll down to see sticky and fixed behavior.</p>
+<p style="height:800px;"></p>
+
+</body>
+</html>
