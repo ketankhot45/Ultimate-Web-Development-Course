@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS Transformations</title>
+
+<style>
+
+/* Common box style */
+.box{
+  width: 120px;
+  height: 120px;
+  margin: 20px;
+  background: steelblue;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+  font-weight: bold;
+}
+
+/* 1. Translate */
+.translate:hover{
+  transform: translate(40px, 20px);
+}
+
+/* 2. Rotate */
+.rotate:hover{
+  transform: rotate(45deg);
+}
+
+/* 3. Scale */
+.scale:hover{
+  transform: scale(1.3);
+}
+
+/* 4. Skew */
+.skew:hover{
+  transform: skew(20deg, 10deg);
+}
+
+/* 5. Transform Origin */
+.origin:hover{
+  transform: rotate(45deg);
+  transform-origin: top left;
+}
+
+.box1:hover {
+  transform: rotateY(45deg);
+  transform-style: preserve-3d;
+}
+
+</style>
+</head>
+
+<body>
+
+<h2>Hover on each box</h2>
+
+<div class="box translate">Translate</div>
+
+<div class="box rotate">Rotate</div>
+
+<div class="box scale">Scale</div>
+
+<div class="box skew">Skew</div> <br>
+
+<div class="box origin">Origin</div>  <br>
+
+<div class="box box1">3d</div>
+
+</body>
+</html>
