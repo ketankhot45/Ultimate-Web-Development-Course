@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Introduction to JavaScript</title>
+
+    <!-- Way 1: Internal JavaScript -->
+    <script>
+        // My First JavaScript Code
+        function myFirstJS() {
+            document.getElementById("demo").innerHTML = "Hello! This is my first JavaScript code.";
+            // script.js
+            console.log("Hello from external JS file!");
+        }
+
+        // Showing Case Sensitivity
+        function caseSensitiveDemo() {
+            let name = "John";
+            let Name = "Doe"; // Different variable due to case sensitivity
+
+            document.getElementById("case").innerHTML =
+                "name = " + name + "<br>Name = " + Name;
+        }
+    </script>
+</head>
+
+<body>
+
+    <h2>Introduction to JavaScript</h2>
+
+    <!-- Way 2: Inline JavaScript -->
+    <button onclick="alert('This is inline JavaScript!')">Click Me (Inline JS)</button>
+
+    <br><br>
+
+    <!-- Way 3: External JavaScript -->
+    <script src="script.js"></script>
+
+    <!-- Output Areas -->
+    <p id="demo"></p>
+    <button onclick="myFirstJS()">Run My First JS</button>
+
+    <p id="case"></p>
+    <button onclick="caseSensitiveDemo()">Show Case Sensitivity</button>
+
+</body>
+
+</html>
