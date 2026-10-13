@@ -1,0 +1,82 @@
+!
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript Arrays</title>
+</head>
+
+<body>
+
+    <h2>Open Console to See Array Output</h2>
+
+    <script>
+
+        // ---------- CREATE ARRAY ----------
+        let fruits = ["Apple", "Banana", "Mango"];
+
+
+        // ---------- ACCESS ELEMENTS ----------
+        console.log(fruits[0]); // first element
+        console.log(fruits[1]); // second element
+
+
+        // ---------- MODIFY ELEMENT ----------
+        fruits[1] = "Orange";
+        console.log("After change:", fruits);
+
+
+        // ---------- ARRAY LENGTH ----------
+        console.log("Length:", fruits.length);
+
+
+        // METHODS OF ARRAYS
+
+        // ---------- ADD ELEMENT ----------
+        fruits.push("Grapes");   // add at end
+        fruits.unshift("Chikku");   // add at first
+        console.log("After add:", fruits);
+ 
+
+        // ---------- REMOVE ELEMENT ----------
+        fruits.pop(); // removes last
+        fruits.shift(); // removes first
+        console.log("After remove:", fruits);
+
+
+        // ---------- LOOP THROUGH ARRAY ----------
+        console.log("Looping array:");
+
+        for (let i = 0; i < fruits.length; i++) {
+            console.log(fruits[i]);
+        }
+
+
+        // ---------- FOR...OF LOOP ----------
+        console.log("Using for...of:");
+
+        for (let item of fruits) {
+            console.log(item);
+        }
+
+        // ---------- Map ----------
+        let numbers = [1, 2, 3];
+        let doubled = numbers.map(num => num * 2);
+        console.log(doubled); // [2, 4, 6]
+
+        // ---------- Filter ----------
+        let scores = [30, 50, 90, 20];
+        let passed = scores.filter(score => score > 40);
+        console.log(passed); // [50, 90]
+
+        // ---------- Others ----------
+        let names = ["Ali", "Sara", "John"];
+        console.log(names.includes("Sara")); // true
+        console.log(names.indexOf("John"));  // 2
+        console.log(names.join(" - "));      // Ali - Sara - John
+
+    </script>
+
+</body>
+
+</html>
