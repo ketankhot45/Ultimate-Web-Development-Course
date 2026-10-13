@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Accessing the DOM</title>
+</head>
+
+<body>
+    <h1>Hello World</h1>
+    <script>
+        console.log(document); // Logs the entire HTML document as a DOM tree
+        console.log(document.title); // "Accessing the DOM title"
+        console.log(document.URL); // Gets the current page URL
+        document.title = "New Title";
+
+        console.log(window); // Logs the global window object
+        console.log(window.innerWidth); // Gets the width of the browser window
+
+        alert("Hello"); // Same as window.alert("Hello")
+    </script>
+</body>
+
+</html>
