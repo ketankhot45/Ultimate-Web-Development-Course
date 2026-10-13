@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Change Content & Style</title>
+</head>
+
+<body>
+
+    <h2 id="heading">Original Heading</h2>
+
+    <p id="para">This is a paragraph.</p>
+
+    <input type="text" id="username" value="John">
+
+    <br><br>
+
+    <button onclick="changeContent()">Click Me</button>
+
+    <script>
+
+        function changeContent() {
+
+            // 1. Change Text Content
+            document.getElementById("heading").innerText = "Heading Changed!";
+
+            // 2. Change HTML Content
+            document.getElementById("para").innerHTML = "<b>Paragraph is now bold!</b>";
+
+            // 3. Change CSS Styling
+            let p = document.getElementById("para");
+            p.style.color = "blue";
+            p.style.fontSize = "20px";
+            p.style.backgroundColor = "lightyellow";
+
+            // 4. Change value
+            const input = document.getElementById("username");
+            input.value = "Ketan";
+        }
+
+    </script>
+
+</body>
+
+</html>
