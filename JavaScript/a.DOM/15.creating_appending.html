@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DOM Element Operations</title>
+</head>
+
+<body>
+
+    <h2>DOM Element Operations</h2>
+
+    <ul id="list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+
+    <br>
+
+    <button onclick="addItem()">Append Item</button>
+    <button onclick="addFirstItem()">Prepend Item</button>
+    <button onclick="removeItem()">Remove Last Item</button>
+
+    <script>
+
+        function addItem() {
+
+            // Create element
+            let newItem = document.createElement("li");
+
+            // Add text
+            newItem.innerText = "New Appended Item";
+
+            // Append to list
+            document.getElementById("list").appendChild(newItem);
+        }
+
+        function addFirstItem() {
+
+            let newItem = document.createElement("li");
+
+            newItem.innerText = "New Prepended Item";
+
+            // Prepend element
+            document.getElementById("list").prepend(newItem);
+        }
+
+        function removeItem() {
+
+            let list = document.getElementById("list");
+
+            // Remove last element
+            list.removeChild(list.lastElementChild);
+        }
+
+    </script>
+</body>
+
+</html>
