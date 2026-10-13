@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript Loops</title>
+</head>
+<body>
+
+<h2>Open Console to See Loop Output</h2>
+
+<script>
+
+// ---------- 1. FOR LOOP ----------
+console.log("For Loop:");
+
+for(let i = 1; i <= 5; i++){
+  console.log(i);
+}
+
+
+// ---------- 2. WHILE LOOP ----------
+console.log("While Loop:");
+
+let a = 1;
+while(a <= 3){
+  console.log(a);
+  a++;
+}
+
+
+// ---------- 3. DO WHILE LOOP ----------
+console.log("Do While Loop:");
+
+let b = 1;
+do{
+  console.log(b);
+  b++;
+}while(b <= 3);
+
+
+// ---------- 4. FOR...IN LOOP (Object) ----------
+console.log("For In Loop:");
+
+let student = {name:"Ketan", age:21, city:"Bangalore"};
+
+for(let key in student){
+  console.log(key + " : " + student[key]);
+}
+
+
+// ---------- 5. FOR...OF LOOP (Array) ----------
+console.log("For Of Loop:");
+let colors = ["Red","Green","Blue"];
+
+for(let color of colors){
+  console.log(color);
+}
+
+</script>
+
+</body>
+</html>
