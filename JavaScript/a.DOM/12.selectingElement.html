@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Slecting DOM Example</title>
+</head>
+<body>
+
+<h2 id="mainHeading">Hello DOM</h2>
+
+<p class="info">Paragraph 1</p>
+<p class="info">Paragraph 2</p>
+
+<button onclick="changeContent()">Click Me</button>
+
+<script>
+
+function changeContent(){
+
+  // 1️⃣ getElementById
+  let heading = document.getElementById("mainHeading");
+  heading.style.color = "red";
+
+
+  // 2️⃣ getElementsByClassName
+  let paragraphs = document.getElementsByClassName("info");
+  paragraphs[0].style.backgroundColor = "yellow";
+
+
+  // 3️⃣ getElementsByTagName
+  let Paragraphs = document.getElementsByTagName("p");
+  Paragraphs[1].style.color = "blue";
+
+
+  // 4️⃣ querySelector (first match)
+  let firstPara = document.querySelector(".info");
+  firstPara.innerHTML = "Changed using querySelector";
+
+
+  // 5️⃣ querySelectorAll (all matches)
+  let allInfo = document.querySelectorAll(".info");
+  allInfo[1].innerHTML = "Changed using querySelectorAll";
+
+}
+
+</script>
+
+</body>
+</html>
