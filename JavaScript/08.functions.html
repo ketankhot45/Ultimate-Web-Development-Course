@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+    <script>
+
+        console.log('Functions in JS')
+
+        function aPlusOne(a, b) {
+            let sum = a + b;
+            let avg = sum / 2;
+            let avgPlusOne = avg + 1;
+            return avgPlusOne
+        }
+        let a = 100;
+        let b = 50;
+        console.log(aPlusOne(a, b))
+
+        console.log(aPlusOne(60, 30))
+        console.log(aPlusOne(40, 20))
+
+
+
+        // ---------- 1. SIMPLE FUNCTION ----------
+        function greet() {
+            console.log("Hello! Welcome.");
+        }
+        greet();
+
+
+        // ---------- 2. FUNCTION WITH PARAMETERS ----------
+        function add(a, b) {
+            console.log("Sum =", a + b);
+        }
+        add(5, 3);
+
+
+        // ---------- 3. FUNCTION WITH RETURN VALUE ----------
+        function multiply(x, y) {
+            return x * y;
+        }
+        let result = multiply(4, 2);
+        console.log("Multiplication =", result);
+
+
+        // ---------- 4. FUNCTION EXPRESSION ----------
+        const message = function () {
+            console.log("This is a function expression");
+        };
+        message();
+
+
+        // ---------- 5. ARROW FUNCTION ----------
+        const square = (n) => n * n;
+        console.log("Square =", square(5));
+
+
+
+        // ---------- 6. SCOPE FUNCTION ----------
+
+        function showAge() {
+            let age = 50;
+            console.log(age);
+        }
+
+        showAge();
+        // console.log(age); // Error: age is not defined
+    </script>
+</head>
+
+<body>
+    <h2>Open Console to See Function Output</h2>
+</body>
+
+</html>
