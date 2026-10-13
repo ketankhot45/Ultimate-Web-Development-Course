@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript Strings</title>
+</head>
+
+<body>
+
+    <h2>Open Console to See String Output</h2>
+
+    <script>
+
+        // ---------- CREATE STRINGS ----------
+        let text1 = "Hello";
+        let text2 = 'World';
+        let text3 = `Java
+                     Script`;  //using Backtick( ` ) helps in multilining strings
+
+
+        // ---------- CONCATENATION ----------
+        let result = text1 + " " + text2;
+        console.log("Concatenation:", result);
+
+
+        // ---------- LENGTH ----------
+        console.log("Length:", text1.length);
+
+        // ---------- Multilines ----------       
+        let text = "Line 1 \nLine 2 \nLine 3";
+        console.log(text);
+
+        // ---------- ACCESS CHARACTERS ----------
+        console.log("First letter:", text1[0]);  //H
+        console.log("Second letter:", text1[1]);  //e
+
+        // Strings are Immutable
+        let greeting = "Hello";
+        greeting[0] = "Y";   // This will not work
+        greeting="X Hello"     // You have to assign a new value by keeping variable as constant
+        console.log(greeting);
+
+
+
+        // ---------- STRING METHODS ----------
+        // All string methods return a new string or value. The original string remains unchanged.
+
+
+        let message = "JavaScript is Fun";
+
+        console.log("Uppercase:", message.toUpperCase());
+        console.log("Lowercase:", message.toLowerCase());
+        console.log("Includes 'Fun':", message.includes("Fun"));
+        console.log("Index of 'is':", message.indexOf("is"));
+        console.log("Slice:", message.slice(0, 10));
+        console.log("Replace:", message.replace("Fun", "Awesome"));
+
+
+        // ---------- TEMPLATE STRING(Imp) ----------
+        let name = "Ketan";
+        let age = 21;
+
+        console.log(`My name is ${name} and I am ${age} years old`);
+
+    </script>
+
+</body>
+
+</html>
