@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Break and Continue Example</title>
+</head>
+<body>
+
+<h2>Open Console to See Output</h2>
+
+<script>
+
+// ---------- BREAK EXAMPLE ----------
+console.log("Break Example:");
+
+for(let i = 1; i <= 10; i++){
+
+  if(i == 5){
+    break;   // stops loop completely,  after 4 all are skipped
+  }
+
+  console.log(i);
+}
+
+
+// ---------- CONTINUE EXAMPLE ----------
+console.log("Continue Example:");
+
+for(let j = 1; j <= 10; j++){
+
+  if(j == 5){
+    continue;   // skips this iteration,  only 5 is skipped
+  }
+
+  console.log(j);
+}
+  
+</script>
+
+</body>
+</html>
