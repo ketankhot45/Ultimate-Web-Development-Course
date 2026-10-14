@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Common Events Example</title>
+
+<style>
+.box{
+  width:150px;
+  height:100px;
+  background: lightgray;
+  text-align:center;
+  line-height:100px;
+  margin-top:10px;
+}
+</style>
+
+</head>
+<body>
+
+<h2>Common Events Demo</h2>
+
+<!-- Click -->
+<button id="btn">Click Me</button>
+
+<br><br>
+
+<!-- Keyup -->
+<input type="text" id="input" placeholder="Type something">
+
+<br><br>
+
+<!-- Submit -->
+<form id="form">
+  <input type="text" placeholder="Enter name">
+  <button type="submit">Submit</button>
+</form>
+
+<br>
+
+<!-- Mouse Events -->
+<div class="box">Hover Me</div>
+
+<script>
+
+// ---------- CLICK EVENT ----------
+const button = document.querySelector("#btn");
+
+button.addEventListener("click", () => {
+  alert("Button clicked!");
+});
+
+
+// ---------- KEYUP EVENT ----------
+const input = document.querySelector("#input");
+
+input.addEventListener("keyup", (event) => {
+  console.log("You typed:", event.key);
+});
+
+
+// ---------- SUBMIT EVENT ----------
+const form = document.querySelector("#form");
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault(); // stop page reload
+  console.log("Form submitted");
+});
+
+
+// ---------- MOUSE EVENTS ----------
+const box = document.querySelector(".box");
+
+box.addEventListener("mouseover", () => {
+  box.style.backgroundColor = "lightblue";
+});
+
+box.addEventListener("mouseout", () => {
+  box.style.backgroundColor = "lightpink";
+});
+
+</script>
+
+</body>
+</html>
