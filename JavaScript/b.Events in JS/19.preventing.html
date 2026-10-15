@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Prevent Default Actions</title>
+</head>
+<body>
+
+<h2>Prevent Default Actions Demo</h2>
+
+<!-- FORM SUBMISSION -->
+<form id="myForm">
+  <input type="text" placeholder="Enter name">
+  <button type="submit">Submit</button>
+</form>
+
+<br>
+
+<!--  LINK NAVIGATION -->
+<a href="https://google.com" id="myLink">Go to Google</a>
+
+<br><br>
+
+<!--  CHECKBOX TOGGLE -->
+<label>
+  <input type="checkbox" id="myCheck"> Accept Terms
+</label>
+
+<script>
+
+// ---------- 1. PREVENT FORM SUBMISSION ----------
+document.getElementById("myForm").addEventListener("submit", function(event){
+  event.preventDefault(); // stops form submission
+  alert("Form submission prevented!");
+});
+
+
+// ---------- 2. PREVENT LINK NAVIGATION ----------
+document.getElementById("myLink").addEventListener("click", function(e){
+  e.preventDefault(); // stops link opening
+  alert("Link navigation prevented!");
+});
+
+
+// ---------- 3. PREVENT CHECKBOX TOGGLE ----------
+document.getElementById("myCheck").addEventListener("click", function(event){
+  event.preventDefault(); // stops checkbox from changing state
+  alert("Checkbox toggle prevented!");
+});
+
+</script>
+
+</body>
+</html>
