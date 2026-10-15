@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Propagation & Delegation</title>
+
+<style>
+.outer{
+  padding: 30px;
+  background: lightblue;
+}
+.middle{
+  padding: 30px;
+  background: lightgreen;
+}
+.inner{
+  padding: 30px;
+  background: lightcoral;
+}
+li{
+  cursor: pointer;
+}
+</style>
+
+</head>
+<body>
+
+<h2>Event Propagation (Bubbling)</h2>
+
+<div class="outer" id="outer">
+  Outer
+  <div class="middle" id="middle">
+    Middle
+    <div class="inner" id="inner">
+      Inner (Click Me)
+    </div>
+  </div>
+</div>
+
+<br><br>
+
+<h2>Event Delegation</h2>
+
+<ul id="list">
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+
+<script>
+
+// ---------- PROPAGATION (BUBBLING) ----------
+document.getElementById("outer").addEventListener("click", () => {
+  console.log("Outer clicked");
+});
+
+document.getElementById("middle").addEventListener("click", () => {
+  console.log("Middle clicked");
+});
+
+document.getElementById("inner").addEventListener("click", (event) => {
+  console.log("Inner clicked");
+event.stopPropagation()
+});
+
+
+// ---------- EVENT DELEGATION ----------
+let list = document.getElementById("list");
+
+list.addEventListener("click", function(event){
+  
+  if(event.target.tagName === "LI"){
+    alert("You clicked: " + event.target.innerText);
+  }
+
+});
+
+</script>
+
+</body>
+</html>
