@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Error Handling</title>
+</head>
+<body>
+
+<script>
+
+try {
+  // Risky code
+  let num = "abc";
+
+  if (isNaN(num)) {
+    throw "Not a number";
+  }
+
+} catch (error) {
+  // Handle error
+  console.log("Error:", error);
+
+} finally {
+  // Always runs
+  console.log("Done");
+}
+
+</script>
+
+</body>
+</html>
