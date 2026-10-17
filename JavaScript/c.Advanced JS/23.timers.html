@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Timers & Intervals</title>
+</head>
+<body>
+
+<script>
+// ---------- TIMER (runs once) ----------
+setTimeout(() => {
+  console.log("Timer executed after 2 seconds");
+}, 2000);
+
+
+// ---------- INTERVAL (runs repeatedly) ----------
+let id = setInterval(() => {
+  console.log("Running every 1 second");
+}, 1000);
+
+
+// ---------- STOP INTERVAL AFTER 5 SECONDS ----------
+setTimeout(() => {
+  clearInterval(id);
+  console.log("Interval stopped");
+}, 5000);
+</script>
+
+</body>
+</html>
