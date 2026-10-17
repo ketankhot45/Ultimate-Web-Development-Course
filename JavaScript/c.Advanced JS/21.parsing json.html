@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JSON Parsing Example</title>
+</head>
+<body>
+
+<h2>JSON Parsing Demo</h2>
+
+<button onclick="parseJSON()">Parse JSON</button>
+
+<p id="output"></p>
+
+<script>
+
+function parseJSON(){
+
+  // JSON string (data format)
+  let jsonData = '{"name":"Ketan","age":21,"city":"Bangalore"}';
+
+  // Convert JSON → JavaScript object
+  let obj = JSON.parse(jsonData);
+
+  // Access values
+  document.getElementById("output").innerText =
+    "Name: " + obj.name +
+    ", Age: " + obj.age +
+    ", City: " + obj.city;
+}
+
+//stringify objects
+const user = {
+  name: 'Harry',
+  age: 25
+};
+
+const json = JSON.stringify(user);
+console.log(json); // Output: {"name":"Harry","age":25}
+
+</script>
+
+</body>
+</html>
